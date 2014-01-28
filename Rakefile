@@ -23,7 +23,7 @@ task :install => [:submodule_init, :submodules] do
   # if want_to_install?('vim configuration (highly recommended)')
     # file_operation(Dir.glob('{vim,vimrc}'))
     # Rake::Task["install_vundle"].execute
-  end
+  # end
 
   Rake::Task["install_prezto"].execute
 
