@@ -6,7 +6,7 @@ desc "Hook our dotfiles into system-standard positions."
 task :install => [:submodule_init, :submodules] do
   puts
   puts "======================================================"
-  puts "Welcome to CF .files Installation."
+  puts "Welcome to ☁ ☁ CF .files Installation."
   puts "======================================================"
   puts
 
@@ -86,8 +86,8 @@ def install_homebrew
   run %{which brew}
   unless $?.success?
     puts "======================================================"
-    puts "Installing Homebrew, the OSX package manager...If it's"
-    puts "already installed, this will do nothing."
+    puts "Installing Homebrew, the missing OSX package manager...If it's"
+    puts "If already installed, this will do nothing."
     puts "======================================================"
     run %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"}
   end
@@ -101,10 +101,9 @@ def install_homebrew
   puts
   puts
   puts "======================================================"
-  puts "Installing Homebrew packages...There may be some warnings."
+  puts "Installing Homebrew some essential packages...There may be some warnings."
   puts "======================================================"
   run %{brew install zsh git tmux reattach-to-user-namespace }
-  # run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   puts
   puts
 end
@@ -194,7 +193,7 @@ def install_prezto
   end
 
   puts
-  puts "Overriding prezto ~/.zpreztorc with YADR's zpreztorc to enable additional modules..."
+  puts "Overriding prezto ~/.zpreztorc with CF.files's zpreztorc to enable additional modules..."
   run %{ ln -nfs "$HOME/.cf.files/zsh/prezto-override/zpreztorc" "${ZDOTDIR:-$HOME}/.zpreztorc" }
 
   puts
@@ -274,11 +273,11 @@ end
 
 def success_msg(action)
   puts ""
-  puts " -   _______             ______         __                         "
-  puts " -  / ___/ /__  __ _____/ / __/__ _____/ /____  ______ __ ©        "
-  puts " - / /__/ / _ \/ // / _  / _// _ `/ __/ __/ _ \/ __/ // /          "
-  puts " - \___/_/\___/\_,_/\_,_/_/  \_,_/\__/\__/\___/_/  \_, /           "
-  puts " -                                                /___/.FILES      "
+  puts " -   _______             ______         __                   "
+  puts " -  / ___/ /__  __ _____/ / __/__ _____/ /____  ______ __ ©  "
+  puts " - / /__/ / _ \/ // / _  / _// _ `/ __/ __/ _ \/ __/ // /    "
+  puts " - \___/_/\___/\_,_/\_,_/_/  \_,_/\__/\__/\___/_/  \_, /     "
+  puts " -                                                /___/.FILES"
   puts ""
   puts "CF.files has been #{action}. Please restart your terminal"
 end
