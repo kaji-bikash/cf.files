@@ -1,6 +1,5 @@
 require 'rake'
 require 'fileutils'
-# require File.join(File.dirname(__FILE__), 'bin', .cf.files', 'vundle')
 
 desc "Hook our dotfiles into system-standard positions."
 task :install => [:submodule_init, :submodules] do
@@ -19,7 +18,7 @@ task :install => [:submodule_init, :submodules] do
   file_operation(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
   file_operation(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   file_operation(Dir.glob('screen/*')) if want_to_install?('screen config')
-  file_operation(Dir.glob('screen/*')) if want_to_install?('misc config')
+  file_operation(Dir.glob('misc/*')) if want_to_install?('misc config')
   file_operation(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
 
   Rake::Task["install_prezto"].execute
@@ -88,7 +87,7 @@ def install_homebrew
   unless $?.success?
     puts "======================================================"
     puts "Installing Homebrew, the missing OSX package manager...If it's"
-    puts "If already installed, this will do nothing."
+    puts "already installed, this will do nothing."
     puts "======================================================"
     run %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"}
   end
@@ -104,7 +103,11 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew some essential packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh git tmux reattach-to-user-namespace }
+  run %{brew install zsh git tmux reattach-to-user-namespace fasd }
+  puts "======================================================"
+  puts "Putting up LaunchAgent that will do brew update automatically"
+  puts "======================================================"
+  run %{ cp com.cloudfactory.dotfiles.brewupdate.plist ~/Library/LaunchAgents/ }
   puts
   puts
 end
