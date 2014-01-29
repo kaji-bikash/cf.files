@@ -6,7 +6,7 @@ desc "Hook our dotfiles into system-standard positions."
 task :install => [:submodule_init, :submodules] do
   puts
   puts "======================================================"
-  puts "Welcome to ☁ ☁ CF .files Installation."
+  puts "Welcome to CF .files Installation."
   puts "======================================================"
   puts
 
@@ -273,17 +273,10 @@ end
 
 def success_msg(action)
   puts ""
-<<<<<<< HEAD
-  puts " -   _______             ______         __                   "
-  puts " -  / ___/ /__  __ _____/ / __/__ _____/ /____  ______ __ ©  "
-  puts " - / /__/ / _ \/ // / _  / _// _ `/ __/ __/ _ \/ __/ // /    "
-  puts " - \___/_/\___/\_,_/\_,_/_/  \_,_/\__/\__/\___/_/  \_, /     "
-=======
   puts " -   _______             ______         __                "
   puts " -  / ___/ /__  __ _____/ / __/__ _____/ /____  ______ __ "
   puts " - / /__/ / _ \/ // / _  / _// _ `/ __/ __/ _ \/ __/ // / "
   puts " - \___/_/\___/\_,_/\_,_/_/  \_,_/\__/\__/\___/_/  \_, /  "
->>>>>>> Some Formatting done in RakeFile
   puts " -                                                /___/.FILES"
   puts ""
   puts "CF.files has been #{action}. Please restart your terminal"
