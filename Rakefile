@@ -19,6 +19,7 @@ task :install => [:submodule_init, :submodules] do
   file_operation(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
   file_operation(Dir.glob('tmux/*')) if want_to_install?('tmux config')
   file_operation(Dir.glob('screen/*')) if want_to_install?('screen config')
+  file_operation(Dir.glob('screen/*')) if want_to_install?('misc config')
   file_operation(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
 
   Rake::Task["install_prezto"].execute
@@ -273,11 +274,11 @@ end
 
 def success_msg(action)
   puts ""
-  puts " -   _______             ______         __                "
-  puts " -  / ___/ /__  __ _____/ / __/__ _____/ /____  ______ __ "
-  puts " - / /__/ / _ \/ // / _  / _// _ `/ __/ __/ _ \/ __/ // / "
-  puts " - \___/_/\___/\_,_/\_,_/_/  \_,_/\__/\__/\___/_/  \_, /  "
-  puts " -                                                /___/.FILES"
+  puts " -    _______             ______         __                "
+  puts " -   / ___/ /__  __ _____/ / __/__ _____/ /____  ______ __ "
+  puts " -  / /__/ / _ \/ // / _  / _// _ `/ __/ __/ _ \/ __/ // / "
+  puts " -  \___/_/\___/\_,_/\_,_/_/  \_,_/\__/\__/\___/_/  \_, /  "
+  puts " -                                                 /___/.FILES"
   puts ""
   puts "CF.files has been #{action}. Please restart your terminal"
 end
