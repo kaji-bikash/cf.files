@@ -27,6 +27,8 @@ task :install => [:submodule_init, :submodules] do
 
   install_term_theme if RUBY_PLATFORM.downcase.include?("darwin")
 
+  apply_osx_performance_toggle if RUBY_PLATFORM.downcase.include?("darwin")
+
   success_msg("installed")
 end
 
@@ -282,6 +284,13 @@ def apply_theme_to_iterm_profile_idx(index, color_scheme_path)
   run %{ /usr/libexec/PlistBuddy -c "Merge '#{color_scheme_path}' :'New Bookmarks':#{index}" ~/Library/Preferences/com.googlecode.iterm2.plist }
 end
 
+def apply_osx_performance_toggle
+  puts "=============================================================================="
+  puts "Running OSX hidden Performance toggles that are very very useful to developers"
+  puts "=============================================================================="
+  run %{ ./apply_osx_performance_toggle }
+end
+
 def success_msg(action)
   puts ""
   puts "       _                 _  __            _"
@@ -292,6 +301,8 @@ def success_msg(action)
   puts "                                                        |___/.FILES"
   puts ""
   puts "CF.files has been #{action}. Please restart your terminal"
+  puts ""
+  puts ""
   puts ""
   puts "========================================================================="
   puts "Please be sure to populate your git config in ~/.gitconfig.user and ...."
