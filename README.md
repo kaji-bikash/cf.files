@@ -2,7 +2,7 @@
 
 ## What is cf.files?
 
-**This setup is an opinionated dotfiles taking major inspiration from YADR that will make your heart sing**
+**This setup is an opinionated dotfiles taking major inspiration from YADR. YADR will make your heart sing if you are using macvim to develop RAILS development.**
 
   * cf.files makes some educated assumptions and based on that makes curated settings.
   * All things are vimized: irb, postres command line, etc.
@@ -76,7 +76,7 @@ mnemonic aliases. Please feel free to edit them:
 Pry offers a much better out of the box IRB experience with colors, tab completion, and lots of other tricks. You can also use it
 as an actual debugger by installing [pry-nav](https://github.com/nixme/pry-nav).
 
-[Learn more about cf.files's pry customizations and how to install](doc/pry.md)
+[Learn more about cf.files's pry customizations and how to install](https://github.com/nixme/jazz_hands)
 
 ### Git Customizations:
 
