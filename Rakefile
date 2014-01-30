@@ -288,7 +288,7 @@ def apply_osx_performance_toggle
   puts "=============================================================================="
   puts "Running OSX hidden Performance toggles that are very very useful to developers"
   puts "=============================================================================="
-  run %{ ./apply_osx_performance_toggle }
+  run %{ $HOME/.cf.files/apply_osx_performance_toggle }
 end
 
 def success_msg(action)
