@@ -45,8 +45,7 @@ Read on to learn what cf.file provides!
 
 Homebrew is _the missing package manager for OSX_. Installed automatically.
 
-We automatically install a few useful packages including ctags, git, and hub, and the silver searcher ('ag')
-You can install macvim from brew as well, or download it from their website.
+We automatically install a few useful packages including fsad, git, zsh.
 
 Since programmers are basically lazy, `brew update` packaged LauchAgent is also included which will not allow brew bit tree go stale.
 
@@ -54,7 +53,7 @@ Since programmers are basically lazy, `brew update` packaged LauchAgent is also 
 
 Think of Zsh as a more awesome bash without having to learn anything new.
 Automatic spell correction for your commands, syntax highlighting, and more.
-We've also provided lots of enhancements:
+YADR also provided lots of enhancements: CF.files adds to that.
 
 * Vim mode and bash style `Ctrl-R` for reverse history finder
 * `Ctrl-x,Ctrl-l` to insert output of last command
@@ -65,8 +64,7 @@ We've also provided lots of enhancements:
 
 ### Aliases
 
-Lots of things I do every day are done with two or three character
-mnemonic aliases. Please feel free to edit them:
+Please feel free to edit/add to these:
 
     ae # alias edit
     ar # alias reload
@@ -115,9 +113,10 @@ also an included Ctrl-R reverse history search feature in editrc, very useful in
 ### OSX Hacks
 
 The osx file is a bash script that sets up sensible defaults for devs and power users
-under osx. Read through it before running it. To use:
+under osx. We know you trust DevOps.So the installation script runs the toggles without confirmation from you.
+Please read through the file if you want to know what each toggle does:
 
-    ./osx_hidden_preftoggle
+    open osx_hidden_preftoggle
 
 These hacks are Lion-centric or may not properly work with other versions. Highlights include:
 
