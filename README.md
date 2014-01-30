@@ -2,7 +2,8 @@
 
 ## What is cf.files?
 
-**This setup is an opinionated dotfiles taking major inspiration from YADR. YADR will make your heart sing if you are using macvim to develop RAILS development.**
+
+**This setup is an opinionated dotfiles taking major inspiration from YADR. YADR will make your heart sing if you are using MacVIM for RAILS development.**
 
   * cf.files makes some educated assumptions and based on that makes curated settings.
   * All things are vimized: irb, postres command line, etc.
