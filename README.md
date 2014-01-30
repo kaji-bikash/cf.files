@@ -47,6 +47,8 @@ Homebrew is _the missing package manager for OSX_. Installed automatically.
 We automatically install a few useful packages including ctags, git, and hub, and the silver searcher ('ag')
 You can install macvim from brew as well, or download it from their website.
 
+Since programmers are basically lazy, `brew update` packaged LauchAgent is also included which will not allow brew bit tree go stale.
+
 ### ZSH
 
 Think of Zsh as a more awesome bash without having to learn anything new.
