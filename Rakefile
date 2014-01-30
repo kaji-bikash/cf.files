@@ -89,6 +89,11 @@ def install_homebrew
     puts "Installing Homebrew, the missing OSX package manager...If it's"
     puts "already installed, this will do nothing."
     puts "======================================================"
+    puts ""
+    puts "======================================================"
+    puts "Homebrew installation is not script friendly right now"
+    puts "Press [ENTER]"
+    puts "======================================================"
     run %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"}
   end
 
@@ -140,7 +145,7 @@ def install_term_theme
   end
 
   # Ask the user which theme he wants to install
-  message = "Which theme would you like to apply to your iTerm2 profile?"
+  message = "Which theme would you like to apply to your iTerm2 profile?[Dark Theme is recommended]"
   color_scheme = ask message, iTerm_available_themes
   color_scheme_file = File.join('iTerm2', "#{color_scheme}.itermcolors")
 
@@ -277,11 +282,12 @@ end
 
 def success_msg(action)
   puts ""
-  puts " -    _______             ______         __                "
-  puts " -   / ___/ /__  __ _____/ / __/__ _____/ /____  ______ __ "
-  puts " -  / /__/ / _ \/ // / _  / _// _ `/ __/ __/ _ \/ __/ // / "
-  puts " -  \___/_/\___/\_,_/\_,_/_/  \_,_/\__/\__/\___/_/  \_, /  "
-  puts " -                                                 /___/.FILES"
+  puts "       _                 _  __            _"
+  puts "   ___| | ___  _   _  __| |/ _| __ _  ___| |_ ___  _ __ _   _"
+  puts "  / __| |/ _ \| | | |/ _` | |_ / _` |/ __| __/ _ \| '__| | | |"
+  puts " | (__| | (_) | |_| | (_| |  _| (_| | (__| || (_) | |  | |_| |"
+  puts "  \___|_|\___/ \__,_|\__,_|_|  \__,_|\___|\__\___/|_|   \__, |"
+  puts "                                                        |___/.FILES"
   puts ""
   puts "CF.files has been #{action}. Please restart your terminal"
 end
