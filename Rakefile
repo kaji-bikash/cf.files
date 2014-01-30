@@ -262,6 +262,8 @@ def file_operation(files, method = :symlink)
     # Eventually.cf.files's zsh extensions should be ported to prezto modules.
     if file == 'zshrc'
       File.open(target, 'a') do |zshrc|
+        zshrc.puts('autoload -Uz promptinit')
+        zshrc.puts('promptinit')
         zshrc.puts('for config_file ($HOME/.cf.files/zsh/*.zsh) source $config_file')
       end
     end
