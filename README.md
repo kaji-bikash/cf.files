@@ -1,5 +1,3 @@
-**Always be sure to run `rake update` after pulling to ensure plugins are updated**
-
 ## What is cf.files?
 
 
