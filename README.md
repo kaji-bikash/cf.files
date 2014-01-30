@@ -60,7 +60,7 @@ YADR also provided lots of enhancements: CF.files adds to that.
 * Fuzzy matching - if you mistype a directory name, tab completion will fix it
 * [fasd](https://github.com/clvv/fasd) integration - hit `z` and partial match for recently used directory. Tab completion enabled.
 * [Prezto - the eye popping behind cf.files's zsh](http://github.com/sorin-ionescu/prezto)
-* [How to add your own ZSH theme](doc/zsh/themes.md)
+
 
 ### Aliases
 
