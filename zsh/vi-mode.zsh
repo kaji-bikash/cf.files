@@ -1,3 +1,3 @@
 # set -o vi
-export EDITOR=subl -w
-export VISUAL=subl -w
+export EDITOR='subl -w'
+export VISUAL='subl -w'
