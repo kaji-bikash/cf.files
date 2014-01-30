@@ -290,4 +290,10 @@ def success_msg(action)
   puts "                                                        |___/.FILES"
   puts ""
   puts "CF.files has been #{action}. Please restart your terminal"
+  puts ""
+  puts "========================================================================="
+  puts "Please be sure to populate your git config in ~/.gitconfig.user and ...."
+  puts "make sure you checkout ~/.secret for easySSH integration"
+  puts "========================================================================="
+
 end
