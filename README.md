@@ -1,7 +1,7 @@
 ## What is cf.files?
 
 
-**This setup is an opinionated dotfiles taking major inspiration from YADR(http://skwp.github.com/dotfiles). YADR will make your heart sing if you are using MacVIM for RAILS development.**
+**This setup is an opinionated dotfiles taking major inspiration from [YADR](http://skwp.github.com/dotfiles). YADR will make your heart sing if you are using MacVIM for RAILS development.**
 
   * cf.files makes some educated assumptions and based on that makes curated settings.
   * All things are vimized: irb, postres command line, etc.
@@ -126,3 +126,7 @@ These hacks are Lion-centric or may not properly work with other versions. Highl
   * Ultra fast key repeat rate (now you can scroll super quick using j/k)
   * No disk image verification (downloaded files open quicker)
   * Display the ~/Library folder in finder (hidden in Lion/Mountain Lion/Mavericks)
+
+###Recommendation 
+
+If you select `Solarized Dark theme` in iTerm2 and use patched fonts eg `Menlo Powerline`, trust me it won't strain your eyes like it does now and you will start loving your terminal screen.
