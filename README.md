@@ -1,11 +1,12 @@
 ## What is cf.files?
 
 
-**This setup is an opinionated dotfiles taking major inspiration from YADR. YADR will make your heart sing if you are using MacVIM for RAILS development.**
+**This setup is an opinionated dotfiles taking major inspiration from YADR(http://skwp.github.com/dotfiles). YADR will make your heart sing if you are using MacVIM for RAILS development.**
 
   * cf.files makes some educated assumptions and based on that makes curated settings.
   * All things are vimized: irb, postres command line, etc.
   * Optimized support for Solarized color scheme only, everything guaranteed to Look Good. Your eyes will thank you.
+  * We personally like history substring search,vimification on non-shell prompts, geeky irb and supercool repeat rate in your code editor of choice.
 
 
 ## Installation
@@ -102,7 +103,11 @@ A .gemrc is included. Never again type `gem install whatever --no-ri --no-rdoc`.
 `tmux.conf` provides some sane defaults for tmux on Mac OS like a powerful status bar and vim keybindings.
 You can customize the configuration in `~/.tmux.conf.user`.
 
-### Vimization of everything
+### Screen configuration
+
+`screenrc` serves screen as `tmux.conf` to tmux. We love choice. Screen is mature and old school still can ROCK !!!
+
+### Vimify
 
 The provided inputrc and editrc will turn your various command line tools like mysql and irb into vim prompts. There's
 also an included Ctrl-R reverse history search feature in editrc, very useful in irb, postgres command line, and etc.
