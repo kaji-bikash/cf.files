@@ -143,6 +143,8 @@ def install_term_theme
     puts "Please check your settings under:"
     puts "Preferences> Profiles> [your profile]> Colors> Load Preset.."
     puts "======================================================"
+    puts "Calling up OSX handy 'open' on the file...just press OKAY"
+    run %{ open "$HOME/.cf.files/iTerm2/Solarized Dark.itermcolors" }
     return
   end
 
