@@ -120,11 +120,12 @@ def install_homebrew
 end
 
 def install_fonts
+  puts ""
   puts "======================================================"
   puts "Installing patched fonts for Powerline/Lightline."
   puts "======================================================"
   run %{ cp -f $HOME/.cf.files/fonts/* $HOME/Library/Fonts }
-  puts
+  puts ""
 end
 
 def install_term_theme
@@ -143,8 +144,7 @@ def install_term_theme
     puts "Please check your settings under:"
     puts "Preferences> Profiles> [your profile]> Colors> Load Preset.."
     puts "======================================================"
-    puts "Calling up OSX handy 'open' on the file...just press OKAY"
-    run %{ open "$HOME/.cf.files/iTerm2/Solarized Dark.itermcolors" }
+    puts ""
     return
   end
 
@@ -164,6 +164,10 @@ def install_term_theme
   else
     apply_theme_to_iterm_profile_idx profiles.index(selected), color_scheme_file
   end
+  puts ""
+  puts "Calling up OSX handy 'open' on the file...just press OKAY"
+  run %{ open "$HOME/.cf.files/iTerm2/Solarized Dark.itermcolors" }
+  puts ""
 end
 
 def iTerm_available_themes
