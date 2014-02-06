@@ -3,6 +3,8 @@
 
 **This setup is an opinionated dotfiles taking major inspiration from [YADR](http://skwp.github.com/dotfiles). YADR will make your heart sing if you are using MacVIM for RAILS development.**
 
+  * cf.files expects you to have iTerm2,GIT source control installed to work seamlessly. Brew can be bootstrapped :).
+  Plus we hope you have generated your SSH keys !!! You do not belong here if you have not.
   * cf.files makes some educated assumptions and based on that makes curated settings.
   * All things are vimized: irb, postres command line, etc.
   * Optimized support for Solarized color scheme only, everything guaranteed to Look Good. Your eyes will thank you.
@@ -78,7 +80,7 @@ as an actual debugger by installing [pry-nav](https://github.com/nixme/pry-nav).
 
 ### Git Customizations:
 
-cf.files will take over your `~/.gitconfig`, so if you want to store your usernames, please put them into `~/.gitconfig.user`
+cf.files will take control over your `~/.gitconfig`, so if you want to store your usernames, please put them into `~/.gitconfig.user`
 
 It is recommended to use this file to set your user info. Alternately, you can set the appropriate environment variables in your `~/.secrets`.
 
