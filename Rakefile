@@ -297,6 +297,14 @@ def apply_osx_performance_toggle
   run %{ $HOME/.cf.files/osx_hidden_preftoggle }
 end
 
+def append_ssh_config_for_speed_n_efficiency
+  puts "=============================================================================="
+  puts "Prepending SSH configuration onto your ssh_config file"
+  puts "=============================================================================="
+  run %{ timestamp=$(date +%s) && cat $HOME/.cf.files/ssh/config $HOME/.ssh/config > /tmp/ssh_config_$timestamp && mv -f /tmp/ssh_config_$timestamp $HOME/.ssh/config }  
+end
+
+
 def success_msg(action)
   puts ""
   puts "       _                 _  __            _"

@@ -6,3 +6,5 @@ Host *
      ControlPersist 2h
      ControlMaster auto
      ControlPath /tmp/ssh-%r@%h:%p
+
+     
