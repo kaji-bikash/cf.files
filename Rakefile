@@ -29,6 +29,8 @@ task :install => [:submodule_init, :submodules] do
 
   apply_osx_performance_toggle if RUBY_PLATFORM.downcase.include?("darwin")
 
+  append_ssh_config_for_speed_n_efficiency
+
   success_msg("installed")
 end
 
