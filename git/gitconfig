@@ -193,5 +193,5 @@
   # option set git creates a real merge commit which records the fact that
   # another branch was merged. I find this easier to understand and read in
   # the log.
-  # mergeoptions = --no-commit
-  mergeoptions = --no-ff
+  mergeoptions = --no-commit
+ # mergeoptions = --no-ff
