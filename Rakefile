@@ -98,7 +98,7 @@ def install_homebrew
     puts "Homebrew installation is not script friendly right now"
     puts "Press [ENTER]"
     puts "======================================================"
-    run %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/master/install)"}
+    run %{ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"}
   end
 
   puts
